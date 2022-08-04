@@ -29,14 +29,18 @@
     "posttest": "npm run kill:test",
     "test-coverage": "jest -i --verbose --forceExit --coverage",
     "debug": "nodemon .",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json .",
+    "commit": "cz"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.2.0",
-    "eslint-plugin-import": "2.22.1",
     "eslint-config-trybe-backend": "1.0.3",
+    "eslint-plugin-import": "2.22.1",
     "frisby": "2.1.2",
+    "husky": "^8.0.1",
     "jest": "26.0.1",
     "jest-each": "^28.0.1",
     "nodemon": "^2.0.15",
@@ -44,5 +48,10 @@
     "sequelize-jest-helpers": "^1.0.2",
     "supertest": "4.0.2",
     "wait-on": "^6.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
