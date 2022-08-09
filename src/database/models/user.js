@@ -14,7 +14,10 @@ const createUserModel = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     image: DataTypes.STRING
   }, {
-    tableName: 'users'
+    tableName: 'Users'
   })
+
   return User;
 }
+
+module.exports = createUserModel;
