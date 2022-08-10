@@ -6,8 +6,8 @@
  * @param {import('sequelize').DataTypes} DataTypes
 */
 
-const createUserModel = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
+const createCategoryModel = (sequelize, DataTypes) => {
+  const Category = sequelize.define('Category', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -18,10 +18,9 @@ const createUserModel = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     image: DataTypes.STRING
   }, {
-    tableName: 'Users', timestamps: false,
+    tableName: 'categories'
   })
-
-  return User;
+  return Category;
 }
 
-module.exports = createUserModel;
+module.exports = createCategoryModel
