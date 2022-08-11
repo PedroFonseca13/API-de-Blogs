@@ -25,4 +25,14 @@ const createUser = async ({ displayName, email, password, image }) => {
 
   return token;
 };
-module.exports = { getAllUsers, createUser };
+
+const findUser = async (id) => {
+  const user = await User.findOne({
+    where: { id },
+    attributes: { exclude: ['password'] },
+  });
+  // console.log('Bug#1 ', user);
+  return user;
+};
+
+module.exports = { getAllUsers, createUser, findUser };

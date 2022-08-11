@@ -5,6 +5,6 @@ const validateToken = require('../middleware/jwtMiddleware');
 
 router.get('/', validateToken, userController.getAllUsers);
 router.post('/', validateBody, userController.createUser);
-// router.post('/login', userController);
+router.get('/:id', validateToken, userController.findUser);
 
 module.exports = router;
