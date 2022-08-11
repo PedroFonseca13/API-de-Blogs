@@ -11,15 +11,15 @@ const createCategory = async (req, res) => {
   }
 };
 
-const findCategory = async (req, res) => {
+const getAllCategories = async (_req, res) => {
   try {
-    const { name } = req.body;
-    const category = await categoriesServices.findCategory(name);
+    // const { name } = req.body;
+    const categories = await categoriesServices.getAllCategories();
 
-    res.status(201).json(category);
+    res.status(200).json(categories);
   } catch (error) {
     res.status(error.status || 500).json({ message: error.message });
   }
 };
 
-module.exports = { createCategory, findCategory };
+module.exports = { createCategory, getAllCategories };

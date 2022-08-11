@@ -3,7 +3,7 @@ const categoriesController = require('../controller/categories.controller');
 const categoriesMiddleware = require('../middleware/categoriesMiddleware');
 const validateToken = require('../middleware/jwtMiddleware');
 
-router.get('/', validateToken, categoriesController.findCategory);
+router.get('/', validateToken, categoriesController.getAllCategories);
 router.post('/', categoriesMiddleware, validateToken, categoriesController.createCategory);
 
 module.exports = router;

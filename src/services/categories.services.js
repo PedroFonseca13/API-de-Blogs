@@ -6,10 +6,12 @@ const createCategory = async ({ name }) => {
   return category;
 };
 
-const findCategory = async () => {
+const getAllCategories = async () => {
   const category = await Category.findAll();
+
+  console.log('FILHO DA PUTA =>', category);
 
   return category;
 };
 
-module.exports = { createCategory, findCategory };
+module.exports = { createCategory, getAllCategories };
