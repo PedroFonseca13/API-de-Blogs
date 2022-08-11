@@ -16,7 +16,7 @@ const createUser = async (req, res) => {
 
     if (!user) return res.status(409).json({ message: 'User already registered' });
 
-    res.status(201).json({ user });
+    res.status(201).json({ token: user });
   } catch (error) {
     res.status(error.status || 500).json({ message: error.message });
   }
