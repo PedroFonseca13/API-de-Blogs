@@ -13,6 +13,7 @@ const createCategoryModel = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
+    name: DataTypes.STRING,
     displayName: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
