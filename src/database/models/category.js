@@ -10,6 +10,7 @@ const createCategoryModel = (sequelize, DataTypes) => {
   const Category = sequelize.define('Category', {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
@@ -19,7 +20,8 @@ const createCategoryModel = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     image: DataTypes.STRING
   }, {
-    tableName: 'categories'
+    tableName: 'Categories',
+    timestamps: false,
   })
   return Category;
 }
