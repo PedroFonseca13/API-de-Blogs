@@ -23,7 +23,7 @@ const createBlogPostModel = (sequelize, DataTypes) => {
       foreignKey: true,
     }
   }, {
-    tableName: 'BlogPost', timestamps: false,
+    tableName: 'BlogPosts', timestamps: false,
   });
 
   BlogPost.associate = (models) => {
