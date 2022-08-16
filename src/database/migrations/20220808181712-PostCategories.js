@@ -16,7 +16,9 @@ module.exports = {
         references: {
           model: 'BlogPosts',
           key: 'id'
-        }
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       },
       categoryId: {
         primaryKey: true,
@@ -25,7 +27,9 @@ module.exports = {
         references: {
           model: 'Categories',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       },
     })
   },
